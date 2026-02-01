@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Love</title>
+
+<style>
+body {
+  background-color: pink;
+  text-align: center;
+  font-family: Arial;
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.heart {
+  position: fixed;
+  bottom: 0;
+  font-size: 24px;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-600px);
+  }
+}
+
+button {
+  padding: 15px;
+  margin: 15px;
+  font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💖 Hello Kudzai Abraham Kasere 💖</h1>
+
+<p>
+From the moment God wrote our story,<br>
+I knew my heart had found its home.<br><br>
+
+You are my safe place,<br>
+My laughter on hard days,<br>
+My calm in every storm.<br><br>
+
+You love me gently,<br>
+You lead me faithfully,<br>
+You hold my hand and my heart.<br><br>
+
+Every day with you feels like a blessing,<br>
+Every moment feels like grace.<br><br>
+
+So today I ask with a smile and a full heart...
+</p>
+
+<h2>Will you be my Valentine? ❤️</h2>
+
+<button onclick="yesClick()">YES</button>
+<button onclick="alert('Nice try 😏 You are mine forever anyway ❤️')">NO</button>
+
+<script>
+function yesClick(){
+  alert("I knew you would say YES 😍 You are my forever Valentine ❤️");
+}
+
+function makeHeart(){
+  var heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+
+  setTimeout(function(){
+    heart.remove();
+  },5000);
+}
+
+setInterval(makeHeart, 300);
+</script>
+
+</body>
+</html>
